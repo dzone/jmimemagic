@@ -708,7 +708,7 @@
 	<description>tar archive</description>
 	<test offset="257" type="string" comparator="=">ustar  \000GNU</test>
 </match>
-<match>
+<!--<match>
   <mimetype>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mimetype>
   <extension>docx</extension>
   <description>Microsoft Office Open XML Document</description>
@@ -743,6 +743,52 @@
   <extension>pptm</extension>
   <description>Microsoft Office Open XML Workbook</description>
   <test offset="0" type="string" comparator="=">PK\003\004</test>
+</match>
+-->
+<match>
+  <mimetype>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mimetype>
+  <extension>docx</extension>
+  <property name="office-type" value="word"/>	
+  <description>Microsoft Office Open XML Document</description>
+  <!--<test offset="0" type="string" comparator="=">PK\003\004</test>-->
+  <test type="detector" offset="0" length="" bitmask="" comparator="=">net.sf.jmimemagic.detectors.OfficeXFileDetector</test>
+</match>
+<match>
+  <mimetype>application/vnd.openxmlformats-officedocument.wordprocessingml.document</mimetype>
+  <extension>docm</extension>
+  <property name="office-type" value="word"/>	
+  <description>Microsoft Office Open XML Document</description>
+  <!--<test offset="0" type="string" comparator="=">PK\003\004</test>-->
+  <test type="detector" offset="0" length="" bitmask="" comparator="=">net.sf.jmimemagic.detectors.OfficeXFileDetector</test>
+</match>
+<match>
+  <mimetype>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</mimetype>
+  <extension>xlsx</extension>
+  <property name="office-type" value="excel"/>	
+  <description>Microsoft Office Open XML Workbook</description>
+  <!--<test offset="0" type="string" comparator="=">PK\003\004</test>-->
+  <test type="detector" offset="0" length="" bitmask="" comparator="=">net.sf.jmimemagic.detectors.OfficeXFileDetector</test>
+</match>
+<match>
+  <mimetype>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</mimetype>
+  <extension>xlsm</extension>
+  <property name="office-type" value="excel"/>	
+  <description>Microsoft Office Open XML Workbook</description>
+  <test type="detector" offset="0" length="" bitmask="" comparator="=">net.sf.jmimemagic.detectors.OfficeXFileDetector</test>
+</match>
+<match>
+  <mimetype>application/vnd.openxmlformats-officedocument.presentationml.presentation</mimetype>
+  <extension>pptx</extension>
+  <property name="office-type" value="powerpoint"/>	
+  <description>Microsoft Office Open XML Workbook</description>
+  <test type="detector" offset="0" length="" bitmask="" comparator="=">net.sf.jmimemagic.detectors.OfficeXFileDetector</test>
+</match>
+<match>
+  <mimetype>application/vnd.openxmlformats-officedocument.presentationml.presentation</mimetype>
+  <extension>pptm</extension>
+  <property name="office-type" value="powerpoint"/>	
+  <description>Microsoft Office Open XML Workbook</description>
+  <test type="detector" offset="0" length="" bitmask="" comparator="=">net.sf.jmimemagic.detectors.OfficeXFileDetector</test>
 </match>
 <match>
 	<mimetype>application/zip</mimetype>
