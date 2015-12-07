@@ -164,19 +164,19 @@
 </match>
 <match>
 	<mimetype>image/gif</mimetype>
-	<extension></extension>
+	<extension>gif</extension>
 	<description>GIF image data</description>
 	<test type="string" offset="0" length="" bitmask="" comparator="=">GIF8</test>
 	<match-list>
 	<match>
 		<mimetype>b, version 8%s,</mimetype>
-		<extension></extension>
+		<extension>gif</extension>
 		<description>b, version 8%s,</description>
 		<test type="string" offset="4" length="" bitmask="" comparator="=">7a</test>
 	</match>
 	<match>
 		<mimetype>b, version 8%s,</mimetype>
-		<extension></extension>
+		<extension>gif</extension>
 		<description>b, version 8%s,</description>
 		<test type="string" offset="4" length="" bitmask="" comparator="=">9a</test>
 	</match>
@@ -2270,7 +2270,7 @@
 </match>
 <match>
 	<mimetype>text/xml</mimetype>
-	<extension>???</extension>
+	<extension>xml</extension>
 	<description>XML 1.0 Document</description>
 	<test offset="0" type="string" comparator="=">&lt;?xml version="1.0"?&gt;</test>
 	<match-list>
